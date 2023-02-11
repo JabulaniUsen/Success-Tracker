@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{
+    background-color: #38388b;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+header,
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,
+form button {
+    font-size: 1.8rem;
+    border: none;
+    background: #fff;
+    border-radius: 2rem;
+}
+form input{
+    padding-left: 0.5rem;
+}
+form button{
+    color: rgb(225, 200, 0);
+    background-color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.4rem;
+}
+form button:hover{
+    background-color: rgb(225, 200, 0);
+    color: #fff;
+}
+
+.fa-circle-plus{
+    padding: 8px;
+}
+.fa-microphone{
+    padding: 10px;
+    margin-left: -80px;
+    font-size: 25px;
+}
+.fa-microphone:hover{
+    color: rgb(190, 171, 26);
+}
+.fa-microphone:active{
+    color: #38388b;
+}
+
+.task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-list{
+    min-width: 30%;
+    list-style: none;
+}
+.task{
+    max-width: 500px;
+    min-width: 500px;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.task li{
+    flex: 1;
+    font-size: 20px;
+}
+.task li:first-child{
+    text-transform: capitalize;
+}
+.trash-btn,
+.complete-btn {
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+
+.complete-btn {
+    background: rgb(225, 200, 0);
+    border-radius: 1.75rem;
+    margin-right: 2px;
+}
+
+.trash-btn {
+    border-radius: 1.75rem;
+    background: rgb(171, 171, 171);
+    margin-right: 5px;
+}
+
+.task-item{
+    padding: 0.5rem 0.6rem;
+}
+
+.fa-trash,
+.fa-check-circle {
+    pointer-events: none;
+    text-align: center;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide{
+    transform: translateX(-10rem);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+select{
+    color: rgb(225, 200, 0);
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: rgb(225, 200, 0);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: #fff;
+    color: rgb(225, 200, 0);
+}
+
+.task-input{
+    width: 80%;
+    outline: none;
+}
+.task-input[type="text"]{
+    text-transform: capitalize;
+}
+.f-head{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+.mic-on{
+    padding: 45px ;
+    width: 200px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    color: #504f4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.mic-is-on{
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: 0.4s;
+}
+.bxs-microphone-alt{
+    font-size: 50px;
+    color: #38388b;
+}
+.mic-on p{
+    font-family: monospace;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 769px) {
+    .task{
+        min-width: 380px;
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .task{
+        max-width: 280px;
+        min-width: 280px;
+    }
+    .task li{
+        flex: 1;
+        font-size: 17px;
+    }
+}

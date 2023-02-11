@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/211174e263.js" crossorigin="anonymous"></script>
+    <title>Success tracker</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Daily task</h1>
+    </header>
+    <form action="">
+        <div class="f-head">
+            <input type="text" class="task-input" >
+            <button type="button" class="speaker">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+            <button type="submit" class="task-button">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
+            
+<!-- 
+            <div class="select">
+                <select name="tasks" class="filter-task">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incompleted">Incompleted</option>
+                </select>
+            </div> -->
+        </div>
+    </form>
+
+    <div class="task-container">
+        <ul class="task-list"></ul>
+    </div>
+
+    <div class="mic-on">
+        <i class='bx bxs-microphone-alt bx-tada' ></i>
+        <p>Listening...</p>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
